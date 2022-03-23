@@ -59,6 +59,7 @@ export class Stanica{
                         terminSelect.appendChild(op);
                     });
                     this.ucitajTermine2();
+                    
                 });
             });
 
@@ -93,11 +94,11 @@ export class Stanica{
             })
             .then(msg=>{
                 if(msg.ok){
-                    alert("SVe je u redu!!!Putnikov novi mail "+novi);
+                    alert("Sve je u redu!!!Putnikov novi mail "+novi);
                     return;
                 }
                 else{
-                    alert("kme kme");
+                    alert("errorz");
                     return;
                 }
             })
@@ -107,6 +108,10 @@ export class Stanica{
         let brisiContainer=document.createElement("div");
         brisiContainer.className="brisi";
         this.kont.appendChild(brisiContainer);
+        // var q =  document.createElement("h3");
+        // q.innerHTML=this.ime;
+        // q.className="Naslov";
+        // brisiContainer.appendChild(q);
         this.crtajInput(brisiContainer,"E-Mail","text","mejl");
         let list=["AC1","AC2","AC3"];
         let xD=document.createElement("select");
@@ -131,15 +136,19 @@ export class Stanica{
             })
             .then(msg=>{
                 if(msg.ok){
-                    alert("Uspeh!")
+                    alert("Brisanje uspesno!")
                     return;
                 }
                 else{
-                    alert("Neuspeh!")
+                    alert("Brisanje neuspesno!")
                     return;
                 }
             })
         };
+        var q =  document.createElement("h3");
+        q.innerHTML=this.ime;
+        q.className="Naslov";
+        brisiContainer.appendChild(q);
     }
     crtajInput(host,labelHTML,tip,naziv){
         let label=document.createElement("label");
