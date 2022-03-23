@@ -1,0 +1,21 @@
+.stanicaKontejner{
+    flex-direction: row;
+    display:flex;
+    /* align-items: center; */
+}
+.dodaj,.menjaj,.brisi{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.dodaj{
+    background-image: rgb(102, 124, 245);
+}
+.stanicaKontejner1{
+    background-color: blue;
+}
+
+.stanicaKontejner2{
+    background-color: pink;
+}
